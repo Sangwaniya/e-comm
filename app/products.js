@@ -1,23 +1,88 @@
 // app/products.js
 export const products = [
     {
-      id: 1,
-      name: 'Acme Circles T-Shirt',
-      price: '$20.00 USD',
-      image: '/t-shirt-1.png', // Update this path to your actual image path
+        id: 1,
+        name: 'Acme Circles T-Shirt',
+        price: '$20.00',
+        image: '/t-shirt-1.png',
+        description: 'A comfortable T-shirt with a unique circles design.',
     },
     {
-      id: 2,
-      name: 'Acme Drawstring Bag',
-      price: '$12.00 USD',
-      image: '/bag-1-dark (2).png', // Update this path to your actual image path
+        id: 2,
+        name: 'Acme Drawstring Bag',
+        price: '$12.00',
+        image: '/bag-1-dark (2).png',
+        description: 'A stylish drawstring bag perfect for daily use.',
     },
     {
-      id: 3,
-      name: 'Acme Mug',
-      price: '$15.00 USD',
-    //   image: 'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fcup-black.png%3Fv%3D1690003088&w=1200&q=75', // Update this path to your actual image path
-        image: 'cup-white (2).png'
-},
-  ];
-  
+        id: 3,
+        name: 'Acme Mug',
+        price: '$15.00',
+        image: 'cup-white (2).png',
+        description: 'A sturdy cup with the Acme logo.',
+    },
+    {
+        id: 4,
+        name: 'Acme Hat',
+        price: '$10.00',
+        image: '/hat-1 (2).png',
+        description: 'A cool hat to keep the sun away.',
+    },
+    {
+        id: 5,
+        name: 'Acme Hoodie',
+        price: '$25.00',
+        image: '/hoodie-1 (3).png',
+        description: 'Comfortable and stylish hoodies.',
+    },
+    {
+        id: 4,
+        name: 'Acme Hat',
+        price: '$10.00',
+        image: '/hat-1 (2).png',
+        description: 'A cool hat to keep the sun away.',
+    },
+    {
+        id: 5,
+        name: 'Acme Hoodie',
+        price: '$25.00',
+        image: '/hoodie-1 (3).png',
+        description: 'Comfortable and stylish hoodies.',
+    },
+    {
+        id: 4,
+        name: 'Acme Hat',
+        price: '$10.00',
+        image: '/hat-1 (2).png',
+        description: 'A cool hat to keep the sun away.',
+    },
+    {
+        id: 5,
+        name: 'Acme Hoodie',
+        price: '$25.00',
+        image: '/hoodie-1 (3).png',
+        description: 'Comfortable and stylish hoodies.',
+    },
+    
+    {
+        id: 5,
+        name: 'Acme Hoodie',
+        price: '$25.00',
+        image: '/hoodie-1 (3).png',
+        description: 'Comfortable and stylish hoodies.',
+    },
+    {
+        id: 4,
+        name: 'Acme Hat',
+        price: '$10.00',
+        image: '/hat-1 (2).png',
+        description: 'A cool hat to keep the sun away.',
+    },
+    {
+        id: 5,
+        name: 'Acme Hoodie',
+        price: '$25.00',
+        image: '/hoodie-1 (3).png',
+        description: 'Comfortable and stylish hoodies.',
+    },
+];
