@@ -1,15 +1,17 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-
+import Header from './Header.js';
+import './globals.css';
 
 export const metadata = {
-  title: "E commerce",
+  title: 'Web Ship Grow',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
