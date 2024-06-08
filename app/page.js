@@ -1,31 +1,42 @@
 // app/page.js
 "use client";
 
-import React from 'react';
-import { useRouter } from 'next/navigation';
+import React, { useState } from 'react';
 import Product from './components/Product';
-import HorizontalScroll from './components/HorizontalScroll';
 import { products } from './products';
+import ProductDetails from './components/ProductDetails';
+import HorizontalScroll from './components/HorizontalScroll';
 
 const HomePage = () => {
-  const router = useRouter();
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const handleProductClick = (productId) => {
-    router.push(`/product/${productId}`);
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
   };
 
   return (
-    <div className="bg-slate-700 p-4">
+    <div className="bg-slate-700 min-h-screen text-white p-8">
+      <h1 className="text-4xl font-bold mb-8">Our Products</h1>
+
+      {/* Conditional Rendering of Product Details */}
       <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <div className="lg:col-span-2">
-          <Product {...products[0]} onClick={() => handleProductClick(products[0].id)} />
-        </div>
-        <div className="lg:flex lg:flex-col lg:space-y-4">
-          <Product {...products[1]} onClick={() => handleProductClick(products[1].id)} />
-          <Product {...products[2]} onClick={() => handleProductClick(products[2].id)} />
-        </div>
+        {selectedProduct ? (
+          <ProductDetails product={selectedProduct} />
+        ) : (
+          <>
+            <div className="lg:col-span-2">
+              <Product {...products[0]} onProductClick={handleProductClick} />
+            </div>
+            <div className="lg:flex lg:flex-col lg:space-y-4">
+              <Product {...products[1]} onProductClick={handleProductClick} />
+              <Product {...products[2]} onProductClick={handleProductClick} />
+            </div>
+          </>
+        )}
       </div>
-      <HorizontalScroll products={products.slice(3)} />
+
+      {/* Related Products Section */}
+      <HorizontalScroll products={products.slice(3)} onProductClick={handleProductClick} />
     </div>
   );
 };

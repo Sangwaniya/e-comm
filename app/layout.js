@@ -1,6 +1,6 @@
 // app/layout.js
 import Header from './Header';
-// import Footer from './Footer'; // Add a Footer component if you have one
+import Footer from './components/Footer';
 import './globals.css';
 
 export const metadata = {
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <body className="bg-slate-700 text-white">
         <Header />
         <main className="flex-grow">{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
