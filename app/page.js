@@ -24,7 +24,7 @@ const HomePage = () => {
           <ProductDetails product={selectedProduct} />
         ) : (
           <>
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 ">
               <Product {...products[0]} onProductClick={handleProductClick} />
             </div>
             <div className="lg:flex lg:flex-col lg:space-y-4">

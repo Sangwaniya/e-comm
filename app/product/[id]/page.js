@@ -29,7 +29,7 @@ const ProductPage = () => {
   return (
     <div className="bg-slate-700 min-h-screen text-white p-8">
       <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
-      <div className="flex">
+      <div className="flex bg-black">
         <div className="w-2/3">
           <img src={currentImage} alt={product.name} className="w-full h-auto rounded-lg mb-4" />
           <div className="flex space-x-4">
