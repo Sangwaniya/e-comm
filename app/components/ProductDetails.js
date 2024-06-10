@@ -39,7 +39,7 @@ const ProductDetails = ({ product, addToCart, toggleCart }) => {
       </div>
       <div className="lg:w-1/2 lg:pl-8 flex flex-col justify-center">
         <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
-        <p className="text-xl text-blue-400 mb-4">{product.price}</p>
+        <p className="text-xl text-blue-400 mb-4">₹ {product.price}</p>
         <div className="mb-4">
           <h3 className="text-lg mb-2">SIZE</h3>
           <div className="flex space-x-2">

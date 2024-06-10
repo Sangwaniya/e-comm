@@ -61,7 +61,7 @@ const CartSidebar = ({ cartItems, setCartItems, isOpen, toggleCart }) => {
       <div className="p-4 border-t absolute bottom-0 left-0 right-0 border-gray-700">
         <p className="flex justify-between mb-2">
           <span>Taxes (18%)</span>
-          <span>${calculateTax().toFixed(2)} USD</span>
+          <span>₹{calculateTax().toFixed(2)} INR</span>
         </p>
         <p className="flex justify-between mb-8">
           <span>Shipping</span>
@@ -69,7 +69,7 @@ const CartSidebar = ({ cartItems, setCartItems, isOpen, toggleCart }) => {
         </p>
         <p className="flex justify-between font-bold mb-8">
           <span>Total</span>
-          <span>${total.toFixed(2)} USD</span>
+          <span>₹{total.toFixed(2)} INR</span>
         </p>
         <button className="w-full mt-4 bg-blue-500 text-white p-2 rounded">
           Proceed to Checkout

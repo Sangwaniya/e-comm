@@ -24,7 +24,7 @@ const Product = ({ id, name, price, images, description, fixedSize, onProductCli
         <span className="font-bold">{name}</span>
       </div>
       <div className="absolute bottom-4 right-4 bg-blue-600 text-white rounded-md p-1">
-        <span>{price}</span>
+        <span>₹ {price}</span>
       </div>
     </div>
   );

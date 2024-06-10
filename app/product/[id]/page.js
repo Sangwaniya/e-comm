@@ -46,7 +46,7 @@ const ProductPage = () => {
         </div>
         <div className="w-1/3 pl-8">
           <div className="bg-black p-4 rounded-lg">
-            <p className="text-2xl font-bold text-blue-500 mb-4">{product.price}</p>
+            <p className="text-2xl font-bold text-blue-500 mb-4">₹ {product.price}</p>
             <div className="mb-4">
               <p className="text-lg font-bold mb-2">SIZE</p>
               <div className="flex space-x-2">
