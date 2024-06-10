@@ -1,9 +1,12 @@
-// app/components/ProductDetails.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const ProductDetails = ({ product }) => {
+const ProductDetails = ({ product, addToCart, toggleCart }) => {
   const [selectedSize, setSelectedSize] = useState(null);
   const [currentImage, setCurrentImage] = useState(product.images[0]);
+
+  useEffect(() => {
+    setCurrentImage(product.images[0]);
+  }, [product]);
 
   const handleImageClick = (image) => {
     setCurrentImage(image);
@@ -11,6 +14,10 @@ const ProductDetails = ({ product }) => {
 
   const handleSizeClick = (size) => {
     setSelectedSize(size);
+  };
+
+  const handleAddToCart = (size) => {
+    addToCart(product, size);
   };
 
   return (
@@ -49,6 +56,10 @@ const ProductDetails = ({ product }) => {
         </div>
         <p className="text-lg mb-4">{product.description}</p>
         <button
+          onClick={() => {
+            handleAddToCart(selectedSize);
+            toggleCart;
+          }}
           className={`add-to-cart-btn w-full p-4 rounded ${selectedSize ? 'bg-blue-500 text-white' : 'bg-gray-500 text-gray-300 cursor-not-allowed'}`}
           disabled={!selectedSize}
         >
