@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="bg-black text-white py-8 ps-8">
       <div className="container mx-auto flex flex-col">
         <div className="flex items-center mb-4">
-          <img src="/logo.png" alt="GROW Logo" className="h-8 mr-5" />
+          <img src="/Logo.png" alt="GROW Logo" className="h-8 mr-5" />
           <span className="text-lg font-semibold">GROW</span>
         </div>
         <nav className="flex flex-col space-y-2">

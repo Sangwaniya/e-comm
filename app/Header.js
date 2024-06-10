@@ -6,7 +6,7 @@ const Header = ({ cartCount, toggleCart }) => {
     <header className="bg-slate-700 text-white flex items-center justify-between p-4">
       <div className="flex items-center">
         <Link href="/" className="flex items-center space-x-2">
-          <img src="/logo.png" alt="Logo" className="w-8 h-8" />
+          <img src="/Logo.png" alt="Logo" className="w-8 h-8" />
           <span className="text-xl font-bold">GROW STORE</span>
         </Link>
         <nav className="ml-10 space-x-4">
