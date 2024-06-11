@@ -1,4 +1,5 @@
 // app/product/[id]/page.js
+// Use this when rounting is in play
 "use client";
 
 import React, { useState } from 'react';

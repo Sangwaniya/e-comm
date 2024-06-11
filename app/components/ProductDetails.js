@@ -18,6 +18,7 @@ const ProductDetails = ({ product, addToCart, toggleCart }) => {
 
   const handleAddToCart = (size) => {
     addToCart(product, size);
+    toggleCart();
   };
 
   return (
@@ -41,7 +42,7 @@ const ProductDetails = ({ product, addToCart, toggleCart }) => {
         <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
         <p className="text-xl text-blue-400 mb-4">₹ {product.price}</p>
         <div className="mb-4">
-          <h3 className="text-lg mb-2">SIZE</h3>
+          <h3 className="text-lg mb-2">SELECT SIZE</h3>
           <div className="flex space-x-2">
             {['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'].map((size) => (
               <button

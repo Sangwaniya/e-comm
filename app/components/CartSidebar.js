@@ -1,7 +1,7 @@
 // app/components/CartSidebar.js
-import React from 'react';
+import {React, useRef, useEffect} from 'react';
 
-const CartSidebar = ({ cartItems, setCartItems, isOpen, toggleCart }) => {
+const CartSidebar = ({ cartItems, setCartItems, isOpen, toggleCart, onProceedToCheckout }) => {
   const handleQuantityChange = (index, change) => {
     const newCartItems = [...cartItems];
     newCartItems[index].quantity += change;
@@ -23,8 +23,24 @@ const CartSidebar = ({ cartItems, setCartItems, isOpen, toggleCart }) => {
 
   const total = calculateTotal();
 
+  const sidebarRef = useRef();
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target) && isOpen) {
+        toggleCart();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, toggleCart]);
+
   return (
     <div
+      ref={sidebarRef}
       className={`fixed top-0 right-0 h-full bg-black text-white w-1/3 transform ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       } transition-transform duration-300`}
@@ -71,7 +87,13 @@ const CartSidebar = ({ cartItems, setCartItems, isOpen, toggleCart }) => {
           <span>Total</span>
           <span>₹{total.toFixed(2)} INR</span>
         </p>
-        <button className="w-full mt-4 bg-blue-500 text-white p-2 rounded">
+        <button
+          onClick={() => {
+            toggleCart();
+            onProceedToCheckout();
+          }}
+          className="w-full mt-4 bg-blue-500 text-white p-2 rounded"
+        >
           Proceed to Checkout
         </button>
       </div>
