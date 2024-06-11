@@ -9,7 +9,6 @@ import HorizontalScroll from './components/HorizontalScroll';
 import CartSidebar from './components/CartSidebar';
 import Header from './Header';
 import Checkout from './Checkout';
-import { useCart } from './context/CartContext';
 
 const HomePage = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
